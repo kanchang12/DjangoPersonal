@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #F2E6FF;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #333333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border-radius: 5px;
+      border: 1px solid #CCCCCC;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    input[type="submit"] {
+      background-color: #FF0000;
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #CC0000;
+    }
+  </style>
+</head>
+<body>
+
+  <form method="get">
+    <label for="name">Name:</label>
+    <input type="text" id="Name" name="Name" required>
+
+    <label for="message">Note:</label>
+    <textarea id="Message" name="Message" required></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <ul>
+    {% for index in all_post %}
+    <li style="background-color: #006400; color: #FFFFFF; padding: 10px; border-radius: 5px;">
+      <span style="color: #0000FF; font-weight: bold;">&rarr;</span> {{ index }}
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
