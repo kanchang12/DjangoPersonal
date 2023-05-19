@@ -1,0 +1,2 @@
+# DjangoPersonal
+Personal Django Applications
